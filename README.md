@@ -34,3 +34,4 @@ Der Ordner `dist/` wird auf den Server geladen (Document Root). `.htaccess` gilt
 ## Backup
 
 `backups/Backup-erstellen.bat` doppelklicken. Es entstehen ZIP-Dateien `kleine-schritte-backup-YYYY-MM-DD_HH-mm.zip` im Ordner `backups/`.
+Die ZIP-Dateien bleiben lokal und werden nicht nach GitHub hochgeladen.
