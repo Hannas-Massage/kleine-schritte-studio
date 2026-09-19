@@ -3,9 +3,6 @@ import { createWhatsAppUrl, siteConfig } from '../data/content';
 
 export const MobileContactBar: React.FC = () => {
   const [visible, setVisible] = useState(false);
-  const isHome =
-    window.location.pathname === '/' ||
-    window.location.pathname === '/index.html';
 
   useEffect(() => {
     const updateVisibility = () => {
@@ -94,7 +91,9 @@ export const MobileContactBar: React.FC = () => {
       </a>
 
       <a
-        href={isHome ? '#kontakt' : '/#kontakt'}
+        href={siteConfig.calUrl}
+        target="_blank"
+        rel="noopener noreferrer"
         tabIndex={visible ? 0 : -1}
         className="flex min-h-16 flex-col items-center justify-center gap-1.5 rounded-xl px-1.5 py-1 text-foreground transition-colors hover:bg-secondary/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
       >
@@ -108,11 +107,12 @@ export const MobileContactBar: React.FC = () => {
             strokeLinejoin="round"
             aria-hidden="true"
           >
-            <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z" />
+            <rect x="3" y="5" width="18" height="16" rx="2" />
+            <path d="M16 3v4M8 3v4M3 11h18" />
           </svg>
         </span>
         <span className="text-[0.6875rem] font-semibold tracking-wide">
-          Nachricht
+          Termin
         </span>
       </a>
     </nav>

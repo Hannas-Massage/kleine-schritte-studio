@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { createWhatsAppUrl, navItems, siteConfig } from '../data/content';
+import { navItems, siteConfig } from '../data/content';
 
 export const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -42,14 +42,12 @@ export const Header: React.FC = () => {
 
         <div className="flex shrink-0 items-center gap-2">
           <a
-            href={createWhatsAppUrl(
-              'Hallo Hanna, ich interessiere mich für eine Massage.'
-            )}
+            href={siteConfig.calUrl}
             target="_blank"
             rel="noreferrer"
             className="hidden whitespace-nowrap rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 lg:inline-flex"
           >
-            Termin per WhatsApp
+            Termin vereinbaren
           </a>
           <button
             type="button"

@@ -1,5 +1,5 @@
 import React from 'react';
-import { pricingGroups } from '../data/content';
+import { pricingGroups, siteConfig } from '../data/content';
 import { ResponsiveImage } from './ResponsiveImage';
 import { Reveal } from './Reveal';
 
@@ -37,7 +37,7 @@ export const Pricing: React.FC = () => {
                   rel="noreferrer"
                   className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-primary px-4 py-2.5 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                 >
-                  Termin buchen
+                  Termin für {group.title}
                   <svg
                     className="h-4 w-4 stroke-current"
                     viewBox="0 0 24 24"
@@ -66,20 +66,20 @@ export const Pricing: React.FC = () => {
         <Reveal>
           <p className="text-sm leading-relaxed text-muted-foreground">
             Jede Massage wird ganz individuell auf dich abgestimmt – von der
-            Dauer bis zum Schwerpunkt der Behandlung. Schreib mir einfach kurz,
-            dann besprechen wir gemeinsam, was am besten zu dir passt, und
-            finden die passende Auszeit für dich.
+            Dauer bis zum Schwerpunkt der Behandlung. Wähle die Massage, die zu
+            dir passt, oder buche über die Übersicht, wenn du noch unsicher
+            bist.
           </p>
           <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
             Änderungen vorbehalten.
           </p>
           <a
-            href="https://cal.com/hannas-massage"
+            href={siteConfig.calUrl}
             target="_blank"
             rel="noreferrer"
             className="mt-8 inline-flex rounded-full bg-primary px-7 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
-            Termin anfragen
+            Individuellen Termin anfragen
           </a>
         </Reveal>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { createWhatsAppUrl } from '../data/content';
+import { siteConfig } from '../data/content';
 import { ResponsiveImage } from './ResponsiveImage';
 import { Reveal } from './Reveal';
 
@@ -23,14 +23,12 @@ export const Hero: React.FC = () => {
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a
-              href={createWhatsAppUrl(
-                'Hallo Hanna, ich möchte gerne einen Termin vereinbaren.'
-              )}
+              href={siteConfig.calUrl}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-primary px-7 py-3 text-center text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             >
-              Termin per WhatsApp
+              Jetzt Termin sichern
             </a>
             <a
               href="#kontakt"

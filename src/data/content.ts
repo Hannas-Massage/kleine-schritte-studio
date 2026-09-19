@@ -26,6 +26,7 @@ export const siteConfig: SiteConfig = {
   instagramUrl: 'https://www.instagram.com/massage_dillingen_donau?g=5',
   googleMapsUrl:
     'https://www.google.com/maps/place/Kleine+Schritte+-+Entspannung+%26+F%C3%B6rderung/@48.5769373,10.4813173,17z/data=!4m6!3m5!1s0x479935d2b5a1a67b:0xcac689950c342842!8m2!3d48.5769373!4d10.4813173!16s%2Fg%2F11z1xvjj3h',
+  calUrl: 'https://cal.com/hannas-massage',
 };
 
 export const googleRating = {

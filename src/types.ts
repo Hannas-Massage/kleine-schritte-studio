@@ -51,6 +51,7 @@ export interface SiteConfig {
   instagramHandle: string;
   instagramUrl: string;
   googleMapsUrl: string;
+  calUrl: string;
 }
 
 export interface GoogleReview {
