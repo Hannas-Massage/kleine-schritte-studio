@@ -1,0 +1,218 @@
+@import "tailwindcss";
+@import "@fontsource/alex-brush/400.css";
+
+/* Lokal gehostete Schriftarten – kein externer Aufruf an Google-Server
+   Karla: Fließtext, Navigation, Buttons
+   Cormorant Garamond: Überschriften
+   Alex Brush: Marken-Schriftzug */
+
+@font-face {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("/fonts/karla-var-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("/fonts/karla-var.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("/fonts/cormorant-garamond-var-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("/fonts/cormorant-garamond-var.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: italic;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("/fonts/cormorant-garamond-var-italic-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: italic;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("/fonts/cormorant-garamond-var-italic.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@theme {
+  --color-background: oklch(98.3% 0.012 82);
+  --color-foreground: oklch(30% 0.032 68);
+  --color-card: oklch(99.3% 0.008 83);
+  --color-card-foreground: oklch(30% 0.032 68);
+  --color-popover: oklch(99.3% 0.008 83);
+  --color-popover-foreground: oklch(30% 0.032 68);
+  --color-primary: oklch(63% 0.125 75);
+  --color-primary-foreground: oklch(98% 0.012 85);
+  --color-secondary: oklch(93% 0.032 82);
+  --color-secondary-foreground: oklch(32% 0.035 70);
+  --color-muted: oklch(95% 0.02 83);
+  --color-muted-foreground: oklch(50% 0.038 73);
+  --color-accent: oklch(89% 0.05 80);
+  --color-accent-foreground: oklch(32% 0.035 72);
+  --color-destructive: oklch(57.7% 0.16 27.325);
+  --color-destructive-foreground: oklch(98.5% 0.009 85);
+  --color-border: oklch(87% 0.035 82);
+  --color-input: oklch(87% 0.035 82);
+  --color-ring: oklch(68% 0.09 78);
+  --color-sand: oklch(95.5% 0.022 85);
+  --color-sand-deep: oklch(86% 0.045 78);
+  --color-gold: oklch(78% 0.096 82);
+  --color-gold-deep: oklch(47.9% 0.081 75);
+  --color-clay: oklch(62% 0.075 48);
+
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-script: "Alex Brush", "Cormorant Garamond", cursive;
+  --font-sans: "Karla", ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-soft: 0 24px 60px -30px oklch(40% 0.05 70 / 0.35);
+}
+
+:root {
+  --radius: 1rem;
+  --background: oklch(98.3% 0.012 82);
+  --foreground: oklch(30% 0.032 68);
+  --card: oklch(99.3% 0.008 83);
+  --card-foreground: oklch(30% 0.032 68);
+  --popover: oklch(99.3% 0.008 83);
+  --popover-foreground: oklch(30% 0.032 68);
+  --primary: oklch(63% 0.125 75);
+  --primary-foreground: oklch(98% 0.012 85);
+  --secondary: oklch(93% 0.032 82);
+  --secondary-foreground: oklch(32% 0.035 70);
+  --muted: oklch(95% 0.02 83);
+  --muted-foreground: oklch(50% 0.038 73);
+  --accent: oklch(89% 0.05 80);
+  --accent-foreground: oklch(32% 0.035 72);
+  --border: oklch(87% 0.035 82);
+  --input: oklch(87% 0.035 82);
+  --ring: oklch(68% 0.09 78);
+  --gradient-calm: linear-gradient(160deg, oklch(98.3% 0.014 83), oklch(91% 0.055 80));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 6rem;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+.font-display {
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+.font-script {
+  font-family: "Alex Brush", "Cormorant Garamond", cursive;
+}
+
+.bg-calm {
+  background-image: linear-gradient(160deg, oklch(98.3% 0.014 83), oklch(91% 0.055 80));
+}
+
+.shadow-soft {
+  box-shadow: 0 24px 60px -30px oklch(40% 0.05 70 / 0.35);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal[data-visible="true"] {
+  opacity: 1;
+  transform: none;
+}
+
+.mobile-contact-bar {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(100%);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.mobile-contact-bar.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+@media (max-width: 1023px) {
+  body.has-mobile-cta {
+    padding-bottom: calc(6.5rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  body.has-mobile-cta [id] {
+    scroll-margin-bottom: calc(6.5rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  body.has-mobile-cta .scroll-top-btn {
+    bottom: calc(6.5rem + env(safe-area-inset-bottom, 0px) + 0.75rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .reveal[data-visible="true"] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .mobile-contact-bar {
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    transform: none;
+  }
+}
+

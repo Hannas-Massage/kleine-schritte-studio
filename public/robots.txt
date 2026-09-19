@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: Domain noch nicht final - Platzhalter ersetzen, sobald die Live-Domain feststeht
+Sitemap: https://kleine-schritte-studio.de/sitemap.xml

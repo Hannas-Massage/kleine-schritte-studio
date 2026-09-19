@@ -1,0 +1,9 @@
+Kleine Schritte – Backups
+
+Alles zu Sicherungen liegt nur in diesem Ordner.
+
+  Backup-erstellen.bat   = neues ZIP anlegen
+  kleine-schritte-backup-JJJJ-MM-TT_SS-MM.zip
+
+Doppelklick auf Backup-erstellen.bat.
+Jedes Backup bekommt Datum und Uhrzeit, alte ZIPs bleiben erhalten.
