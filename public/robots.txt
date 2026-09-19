@@ -1,3 +1,9 @@
+# TODO: Sobald die finale Domain (kleine-schritte-studio.de) live ist:
+# 1) Das <meta name="robots" content="noindex, follow" /> in index.html
+#    wieder entfernen
+# 2) Diese Zeile hier sowie og:url in index.html von der Vercel-URL/dem
+#    Platzhalter auf die echte, live erreichbare Domain umstellen
+
 User-agent: *
 Allow: /
 
