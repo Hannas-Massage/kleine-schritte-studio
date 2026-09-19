@@ -7,14 +7,14 @@ export const HomeVisit: React.FC = () => {
       <div className="mx-auto max-w-3xl px-5 text-center">
         <Reveal>
           <h2 className="text-3xl sm:text-4xl">
-            Entspannung, ganz nach deinen Wünschen
+            Entspannung bei mir in Dillingen
           </h2>
           <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
-            Mit meiner Wellness Massage bringe ich Ruhe, Wärme und achtsame
-            Berührung in deinen Alltag. Jede Behandlung wird ganz auf dich und
-            deine Bedürfnisse abgestimmt – mit hochwertigen Ölen, ruhiger Musik
-            und der Zeit, die du dir verdienst. Kein Stress, kein Zeitdruck –
-            nur Raum für dich und deine Entspannung.
+            Bei mir in Dillingen findest du Ruhe, Wärme und achtsame Berührung.
+            Jede Behandlung wird ganz auf dich und deine Bedürfnisse abgestimmt
+            – mit hochwertigen Ölen, ruhiger Musik und der Zeit, die du dir
+            verdienst. Kein Stress, kein Zeitdruck – nur Raum für dich und
+            deine Entspannung.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3 text-sm">
             <span className="inline-flex items-center gap-2 rounded-full bg-card px-5 py-2.5">

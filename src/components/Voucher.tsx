@@ -10,7 +10,7 @@ export const Voucher: React.FC = () => {
           <div className="max-w-2xl">
             <h2 className="text-3xl sm:text-4xl">Verschenke eine Auszeit</h2>
             <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
-              Eine mobile Wellnessmassage ist ein besonderes Geschenk – für Mama,
+              Eine Wellnessmassage ist ein besonderes Geschenk – für Mama,
               den Partner, zum Geburtstag oder für die Großeltern. Gutscheine sind
               auf Anfrage per WhatsApp erhältlich, individuell auf Wunsch und
               Anlass abgestimmt.

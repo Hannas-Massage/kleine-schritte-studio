@@ -139,10 +139,20 @@ export const Contact: React.FC = () => {
                   Standort
                 </span>
                 <p className="mt-1 text-lg font-bold text-foreground sm:text-xl">
-                  {siteConfig.city}, Bayern
+                  <a
+                    href={siteConfig.googleMapsUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-foreground transition-colors hover:text-primary"
+                  >
+                    {siteConfig.street}
+                  </a>
+                </p>
+                <p className="text-lg font-bold text-foreground sm:text-xl">
+                  {siteConfig.zip} {siteConfig.city}
                 </p>
                 <p className="mt-2 max-w-sm text-sm font-normal leading-relaxed text-muted-foreground">
-                  Ich komme zu dir nach Hause in: {formatServedLocations()}.
+                  Kundinnen kommen unter anderem aus {formatServedLocations()}.
                 </p>
               </div>
             </div>

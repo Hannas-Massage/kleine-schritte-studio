@@ -146,28 +146,6 @@ export const processSteps: ProcessStepItem[] = [
   },
 ];
 
-export const faqs: FaqItem[] = [
-  {
-    question: 'Wie läuft die Massage ab?',
-    answer:
-      'Jede Massage wird ganz individuell auf dich abgestimmt – vom Ablauf bis zur Dauer. Ich nehme mir die Zeit, vorab kurz mit dir zu besprechen, was du dir wünschst, damit du dich rundum wohlfühlst. Bei Fragen dazu sprich mich gerne vorab an.',
-  },
-  {
-    question: 'Was muss ich vorbereiten?',
-    answer:
-      'Nichts Besonderes. Am wohlsten fühlst du dich meist in bequemer Kleidung, und wenn du kurz vorher nicht allzu schwer gegessen hast. Alles Weitere bespreche ich gerne vorab mit dir.',
-  },
-  {
-    question: 'Gibt es Gründe, die gegen eine Massage sprechen?',
-    answer: 'Bei akutem Fieber, frischen Verletzungen oder akuten Entzündungen sollte keine Massage stattfinden. Im Zweifel bitte vorher kurz Rücksprache halten.',
-  },
-  {
-    question: 'Welche Öle werden verwendet?',
-    answer:
-      'Ich verwende hochwertige, natürliche Öle, ganz auf dich abgestimmt. Falls du Allergien oder Unverträglichkeiten hast, sag mir das gerne vorab kurz Bescheid.',
-  },
-];
-
 export const servedLocations: string[] = [
   'Dillingen an der Donau',
   'Lauingen',
@@ -182,3 +160,29 @@ export const formatServedLocations = (locations: string[] = servedLocations): st
   if (locations.length === 1) return locations[0];
   return `${locations.slice(0, -1).join(', ')} und ${locations[locations.length - 1]}`;
 };
+
+export const faqs: FaqItem[] = [
+  {
+    question: 'Wo findet die Massage statt?',
+    answer: `Bei mir in ${siteConfig.city}, ${siteConfig.street}. Kundinnen kommen unter anderem aus ${formatServedLocations(servedLocations.filter((location) => location !== siteConfig.city))}.`,
+  },
+  {
+    question: 'Wie läuft die Massage ab?',
+    answer:
+      'Jede Massage wird ganz individuell auf dich abgestimmt – vom Ablauf bis zur Dauer. Ich nehme mir die Zeit, vorab kurz mit dir zu besprechen, was du dir wünschst, damit du dich rundum wohlfühlst. Bei Fragen dazu sprich mich gerne vorab an.',
+  },
+  {
+    question: 'Was muss ich vorbereiten?',
+    answer:
+      'Nichts Besonderes – alles Nötige ist vor Ort. Am wohlsten fühlst du dich meist in bequemer Kleidung, und wenn du kurz vorher nicht allzu schwer gegessen hast. Alles Weitere bespreche ich gerne vorab mit dir.',
+  },
+  {
+    question: 'Gibt es Gründe, die gegen eine Massage sprechen?',
+    answer: 'Bei akutem Fieber, frischen Verletzungen oder akuten Entzündungen sollte keine Massage stattfinden. Im Zweifel bitte vorher kurz Rücksprache halten.',
+  },
+  {
+    question: 'Welche Öle werden verwendet?',
+    answer:
+      'Ich verwende hochwertige, natürliche Öle, ganz auf dich abgestimmt. Falls du Allergien oder Unverträglichkeiten hast, sag mir das gerne vorab kurz Bescheid.',
+  },
+];

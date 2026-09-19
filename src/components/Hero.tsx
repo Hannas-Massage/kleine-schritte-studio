@@ -43,7 +43,7 @@ export const Hero: React.FC = () => {
         <Reveal>
           <ResponsiveImage
             src="/assets/hero-massage-FZs6C1Mn.jpg"
-            alt="Vorbereitete Massageliege mit Handtüchern und Massageöl – mobile Wellnessmassage in Dillingen"
+            alt="Vorbereitete Massageliege mit Handtüchern und Massageöl – Wellnessmassage in Dillingen"
             width={1600}
             height={1200}
             priority

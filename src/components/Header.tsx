@@ -12,8 +12,10 @@ export const Header: React.FC = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur${
-        mobileMenuOpen ? ' is-open' : ''
+      className={`sticky top-0 z-50 border-b border-border/60${
+        mobileMenuOpen
+          ? ' bg-background'
+          : ' bg-background/85 backdrop-blur'
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-5 py-4 lg:gap-4">
@@ -62,7 +64,7 @@ export const Header: React.FC = () => {
       </div>
 
       {mobileMenuOpen && (
-        <nav className="flex flex-col gap-1 border-t border-border/60 px-5 pb-4 lg:hidden">
+        <nav className="flex flex-col gap-1 border-t border-border/60 bg-background px-5 pb-4 lg:hidden">
           {navItems.map((item) => (
             <a
               key={item.href}
