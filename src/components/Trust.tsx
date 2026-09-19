@@ -37,7 +37,7 @@ const GoogleMark: React.FC<{ className?: string }> = ({
 
 const StarRow: React.FC<{ label: string }> = ({ label }) => {
   return (
-    <span className="inline-flex gap-0.5 text-primary" aria-label={label}>
+    <span role="img" className="inline-flex gap-0.5 text-primary" aria-label={label}>
       {Array.from({ length: 5 }).map((_, index) => (
         <svg
           key={index}

@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "@fontsource/alex-brush/400.css";
+@import "@fontsource/alex-brush/latin-400.css";
 
 /* Lokal gehostete Schriftarten – kein externer Aufruf an Google-Server
    Karla: Fließtext, Navigation, Buttons
@@ -67,7 +67,7 @@
   --color-card-foreground: oklch(30% 0.032 68);
   --color-popover: oklch(99.3% 0.008 83);
   --color-popover-foreground: oklch(30% 0.032 68);
-  --color-primary: oklch(63% 0.125 75);
+  --color-primary: oklch(55.9% 0.125 75);
   --color-primary-foreground: oklch(98% 0.012 85);
   --color-secondary: oklch(93% 0.032 82);
   --color-secondary-foreground: oklch(32% 0.035 70);
@@ -101,7 +101,7 @@
   --card-foreground: oklch(30% 0.032 68);
   --popover: oklch(99.3% 0.008 83);
   --popover-foreground: oklch(30% 0.032 68);
-  --primary: oklch(63% 0.125 75);
+  --primary: oklch(55.9% 0.125 75);
   --primary-foreground: oklch(98% 0.012 85);
   --secondary: oklch(93% 0.032 82);
   --secondary-foreground: oklch(32% 0.035 70);

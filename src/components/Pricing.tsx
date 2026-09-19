@@ -1,5 +1,6 @@
 import React from 'react';
 import { pricingGroups } from '../data/content';
+import { ResponsiveImage } from './ResponsiveImage';
 import { Reveal } from './Reveal';
 
 export const Pricing: React.FC = () => {
@@ -83,12 +84,12 @@ export const Pricing: React.FC = () => {
         </Reveal>
 
         <Reveal delay={120}>
-          <img
+          <ResponsiveImage
             src="/assets/massage-hands-giX2iwHR.jpg"
             alt="Lomi Lomi Nui Massage mit warmem Öl am Rücken"
-            loading="lazy"
             width={1200}
             height={1200}
+            sizes="(min-width: 768px) min(36rem, 50vw), calc(100vw - 2.5rem)"
             className="w-full rounded-[2rem] object-cover shadow-soft"
           />
         </Reveal>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { createWhatsAppUrl } from '../data/content';
+import { ResponsiveImage } from './ResponsiveImage';
 import { Reveal } from './Reveal';
 
 export const Hero: React.FC = () => {
@@ -40,11 +41,13 @@ export const Hero: React.FC = () => {
           </div>
         </div>
         <Reveal>
-          <img
+          <ResponsiveImage
             src="/assets/hero-massage-FZs6C1Mn.jpg"
             alt="Vorbereitete Massageliege mit Handtüchern und Massageöl – mobile Wellnessmassage in Dillingen"
             width={1600}
             height={1200}
+            priority
+            sizes="(min-width: 768px) min(36rem, 50vw), calc(100vw - 2.5rem)"
             className="w-full rounded-[2rem] object-cover shadow-soft"
           />
         </Reveal>

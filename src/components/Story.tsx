@@ -1,5 +1,6 @@
 import React from 'react';
 import { siteConfig } from '../data/content';
+import { ResponsiveImage } from './ResponsiveImage';
 import { Reveal } from './Reveal';
 
 export const Story: React.FC = () => {
@@ -7,12 +8,12 @@ export const Story: React.FC = () => {
     <section id="ueber-mich" className="bg-secondary/60 py-20">
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 md:grid-cols-2">
         <Reveal>
-          <img
+          <ResponsiveImage
             src="/assets/story-ambiance-C8V-VdEu.jpg"
             alt="Kerze, Handtücher und Steine – ruhige Wellness-Atmosphäre für die Massage zuhause"
-            loading="lazy"
             width={1200}
             height={1408}
+            sizes="(min-width: 768px) min(36rem, 50vw), calc(100vw - 2.5rem)"
             className="w-full rounded-[2rem] object-cover shadow-soft"
           />
         </Reveal>
