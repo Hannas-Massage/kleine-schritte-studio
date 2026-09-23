@@ -6,19 +6,21 @@ import { Reveal } from './Reveal';
 export const Story: React.FC = () => {
   return (
     <section id="ueber-mich" className="bg-secondary/60 py-20">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 md:grid-cols-2">
-        <Reveal>
-          <ResponsiveImage
-            src="/assets/story-ambiance-C8V-VdEu.jpg"
-            alt="Kerze, Handtücher und Steine – ruhige Wellness-Atmosphäre für die Massage zuhause"
-            width={1200}
-            height={1408}
-            sizes="(min-width: 768px) min(36rem, 50vw), calc(100vw - 2.5rem)"
-            className="w-full rounded-[2rem] object-cover shadow-soft"
-          />
+      <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 md:grid-cols-[1fr_18.5rem]">
+        <Reveal className="md:order-2">
+          <div className="mx-auto w-full max-w-sm md:ml-auto md:mr-0 md:max-w-[18.5rem]">
+            <ResponsiveImage
+              src="/assets/hanna-portrait.jpg"
+              alt="Hanna Dederer, Gründerin von Kleine Schritte"
+              width={960}
+              height={1075}
+              sizes="(min-width: 768px) 18.5rem, min(24rem, calc(100vw - 2.5rem))"
+              className="aspect-[4/5] h-auto w-full rounded-[2rem] object-cover object-[center_42%] shadow-soft"
+            />
+          </div>
         </Reveal>
 
-        <Reveal delay={120}>
+        <Reveal delay={120} className="md:order-1">
           <h2 className="text-3xl sm:text-4xl">Meine Geschichte</h2>
           <div className="mt-5 space-y-4 text-sm leading-relaxed text-muted-foreground">
             <p>

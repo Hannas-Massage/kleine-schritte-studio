@@ -37,7 +37,7 @@ export const Pricing: React.FC = () => {
                   rel="noreferrer"
                   className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-primary px-4 py-2.5 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                 >
-                  Termin für {group.title}
+                  {group.ctaLabel ?? `Termin für ${group.title}`}
                   <svg
                     className="h-4 w-4 stroke-current"
                     viewBox="0 0 24 24"

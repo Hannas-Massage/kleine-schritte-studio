@@ -11,6 +11,7 @@ export interface HighlightItem {
 export interface OfferItem {
   title: string;
   text: string;
+  badge?: string;
 }
 
 export interface PricingOption {
@@ -22,6 +23,7 @@ export interface PricingGroup {
   title: string;
   options: PricingOption[];
   calLink: string;
+  ctaLabel?: string;
 }
 
 export interface ProcessStepItem {

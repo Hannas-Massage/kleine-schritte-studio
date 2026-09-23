@@ -89,15 +89,28 @@ export const highlights: HighlightItem[] = [
 export const offers: OfferItem[] = [
   {
     title: 'Entspannungs-Massage',
-    text: 'Sanfte, ruhige Berührungen für junge Erwachsene, Eltern und ältere Menschen. Eine achtsame Auszeit vom Alltag – zum Loslassen, Zur-Ruhe-Kommen und Energie schöpfen.',
+    text: 'Sanfte, ruhige Berührungen für junge Erwachsene, Eltern und ältere Menschen. Mit gleichmäßigen, achtsamen Bewegungen und viel Zeit für dich hilft sie, Anspannung loszulassen, den Kopf frei zu bekommen und neue Energie zu schöpfen. Eine kleine Auszeit vom Alltag, ganz für dich allein.',
   },
   {
     title: 'Rücken & Beine',
-    text: 'Gezielte, sanfte Entspannung für Rücken und Beine – passend, wenn du wenig Zeit hast oder einen klaren Schwerpunkt möchtest.',
+    text: 'Gezielte, sanfte Entspannung für Rücken und Beine – ideal, wenn du wenig Zeit hast oder einen klaren Schwerpunkt möchtest. Verspannungen werden gelöst, die Durchblutung angeregt und schwere Beine spürbar entlastet.',
   },
   {
     title: 'Lomi Lomi Nui',
-    text: 'Die fließende hawaiianische Massage mit warmem Öl und weichen, rhythmischen Bewegungen. Wärme, Ruhe und ein tiefes Gefühl von Getragensein.',
+    text: 'Die fließende hawaiianische Massage mit warmem Öl und weichen, rhythmischen Bewegungen. Lange, harmonische Streichungen lösen Verspannungen im ganzen Körper und schenken ein tiefes Gefühl von Wärme, Ruhe und Getragensein.',
+  },
+  {
+    title: 'Fußreflexzonenmassage',
+    text: 'Gezielte Massage der Reflexzonen an den Füßen – für tiefe Entspannung und neue Energie im ganzen Körper. Durch sanften Druck auf bestimmte Punkte kann sich die Wirkung weit über die Füße hinaus spüren lassen und zu innerer Ruhe verhelfen.',
+  },
+  {
+    title: 'Sportmassage',
+    text: 'Kräftige, gezielte Massage zur Regeneration und Lockerung der Muskulatur – ideal nach dem Sport oder bei Verspannungen. Sie unterstützt die Durchblutung, löst hartnäckige Verspannungen und hilft dem Körper, sich schneller zu erholen.',
+  },
+  {
+    title: 'Schwangerschaftsmassage',
+    text: 'Eine besonders sanfte Massage, ganz auf die Bedürfnisse werdender Mütter abgestimmt. In sicherer, bequemer Lagerung löse ich Verspannungen im Rücken- und Nackenbereich, fördere die Durchblutung und schenke dir einen Moment tiefer Entspannung – nur für dich und dein Baby.',
+    badge: 'Ab 5. Oktober 2026',
   },
 ];
 
@@ -106,8 +119,9 @@ export const pricingGroups: PricingGroup[] = [
     title: 'Entspannungs-Massage',
     calLink: 'https://cal.com/hannas-massage/entspannungs-massage',
     options: [
-      { duration: '60 Min.', price: '59 €' },
-      { duration: '90 Min.', price: '85 €' },
+      { duration: '60 Min.', price: '60 €' },
+      { duration: '90 Min.', price: '90 €' },
+      { duration: '120 Min.', price: '125 €' },
     ],
   },
   {
@@ -115,16 +129,31 @@ export const pricingGroups: PricingGroup[] = [
     calLink: 'https://cal.com/hannas-massage/rucken-beinmassage',
     options: [
       { duration: '30 Min.', price: '35 €' },
-      { duration: '45 Min.', price: '49 €' },
+      { duration: '45 Min.', price: '50 €' },
     ],
   },
   {
     title: 'Lomi Lomi Nui',
     calLink: 'https://cal.com/hannas-massage/lomi-lomi-nui-massage',
     options: [
-      { duration: '60 Min.', price: '75 €' },
-      { duration: '90 Min.', price: '115 €' },
-      { duration: '120 Min.', price: '139 €' },
+      { duration: '60 Min.', price: '80 €' },
+      { duration: '90 Min.', price: '120 €' },
+      { duration: '120 Min.', price: '150 €' },
+    ],
+  },
+  {
+    title: 'Fußreflexzonenmassage',
+    calLink: 'https://cal.com/hannas-massage',
+    ctaLabel: 'Termin anfragen',
+    options: [{ duration: '45 Min.', price: '50 €' }],
+  },
+  {
+    title: 'Sportmassage',
+    calLink: 'https://cal.com/hannas-massage',
+    ctaLabel: 'Termin anfragen',
+    options: [
+      { duration: '60 Min.', price: '70 €' },
+      { duration: '90 Min.', price: '100 €' },
     ],
   },
 ];

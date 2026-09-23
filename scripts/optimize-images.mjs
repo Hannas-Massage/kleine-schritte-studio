@@ -6,6 +6,7 @@ const files = [
   'public/assets/hero-massage-FZs6C1Mn.jpg',
   'public/assets/massage-hands-giX2iwHR.jpg',
   'public/assets/story-ambiance-C8V-VdEu.jpg',
+  'public/assets/hanna-portrait.jpg',
 ];
 
 for (const src of files) {

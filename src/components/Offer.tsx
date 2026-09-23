@@ -8,7 +8,7 @@ export const Offer: React.FC = () => {
       <Reveal>
         <h2 className="text-3xl sm:text-4xl">Mein Angebot</h2>
         <p className="mt-3 max-w-xl text-muted-foreground">
-          Drei Wege zur Ruhe – alle mit Herz, Zeit und achtsamer Berührung.
+          Mehrere Wege zur Ruhe – jeder mit Herz, Zeit und achtsamer Berührung.
         </p>
       </Reveal>
 
@@ -16,6 +16,11 @@ export const Offer: React.FC = () => {
         {offers.map((item, index) => (
           <Reveal key={item.title} delay={index * 120}>
             <article className="h-full rounded-3xl bg-secondary p-8">
+              {item.badge && (
+                <span className="mb-3 inline-block rounded-full bg-accent px-3 py-1 text-xs font-medium text-accent-foreground">
+                  {item.badge}
+                </span>
+              )}
               <h3 className="text-2xl text-foreground">{item.title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 {item.text}
