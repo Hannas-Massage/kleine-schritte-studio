@@ -18,40 +18,59 @@ export const Pricing: React.FC = () => {
         {pricingGroups.map((group, index) => (
           <Reveal key={group.title} delay={index * 100} className="h-full">
             <div className="flex h-full flex-col rounded-3xl border border-border/80 bg-card p-7 shadow-soft">
+              {group.badge && (
+                <span className="mb-3 inline-block rounded-full bg-accent px-3 py-1 text-xs font-medium text-accent-foreground">
+                  {group.badge}
+                </span>
+              )}
               <h3 className="text-xl text-foreground">{group.title}</h3>
-              <div className="mt-5 space-y-3">
-                {group.options.map((option) => (
-                  <div
-                    key={option.duration}
-                    className="flex items-baseline justify-between border-b border-border/40 pb-2 text-sm last:border-0"
-                  >
-                    <span className="text-muted-foreground">{option.duration}</span>
-                    <span className="font-medium text-foreground">{option.price}</span>
+              {group.placeholderText ? (
+                <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
+                  {group.placeholderText}
+                </p>
+              ) : (
+                <>
+                  <div className="mt-5 space-y-3">
+                    {group.options.map((option) => (
+                      <div
+                        key={option.duration}
+                        className="flex items-baseline justify-between border-b border-border/40 pb-2 text-sm last:border-0"
+                      >
+                        <span className="text-muted-foreground">
+                          {option.duration}
+                        </span>
+                        <span className="font-medium text-foreground">
+                          {option.price}
+                        </span>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-              <div className="mt-auto pt-6">
-                <a
-                  href={group.calLink}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-primary px-4 py-2.5 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                >
-                  {group.ctaLabel ?? `Termin für ${group.title}`}
-                  <svg
-                    className="h-4 w-4 stroke-current"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M5 12h14" />
-                    <path d="M13 6l6 6-6 6" />
-                  </svg>
-                </a>
-              </div>
+                  {group.calLink && (
+                    <div className="mt-auto pt-6">
+                      <a
+                        href={group.calLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-primary px-4 py-2.5 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                      >
+                        {group.ctaLabel ?? `Termin für ${group.title}`}
+                        <svg
+                          className="h-4 w-4 stroke-current"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          aria-hidden="true"
+                        >
+                          <path d="M5 12h14" />
+                          <path d="M13 6l6 6-6 6" />
+                        </svg>
+                      </a>
+                    </div>
+                  )}
+                </>
+              )}
             </div>
           </Reveal>
         ))}

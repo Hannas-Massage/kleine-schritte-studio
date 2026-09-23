@@ -156,6 +156,13 @@ export const pricingGroups: PricingGroup[] = [
       { duration: '90 Min.', price: '100 €' },
     ],
   },
+  {
+    title: 'Schwangerschaftsmassage',
+    badge: 'Ab 5. Oktober 2026',
+    placeholderText:
+      'Preise werden nach Abschluss des Kurses bekannt gegeben.',
+    options: [],
+  },
 ];
 
 export const processSteps: ProcessStepItem[] = [

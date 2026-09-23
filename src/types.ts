@@ -22,8 +22,10 @@ export interface PricingOption {
 export interface PricingGroup {
   title: string;
   options: PricingOption[];
-  calLink: string;
+  calLink?: string;
   ctaLabel?: string;
+  badge?: string;
+  placeholderText?: string;
 }
 
 export interface ProcessStepItem {
