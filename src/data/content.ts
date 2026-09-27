@@ -143,14 +143,12 @@ export const pricingGroups: PricingGroup[] = [
   },
   {
     title: 'Fußreflexzonenmassage',
-    calLink: 'https://cal.com/hannas-massage',
-    ctaLabel: 'Termin anfragen',
+    calLink: 'https://cal.com/hannas-massage/fußreflexzonenmassage',
     options: [{ duration: '45 Min.', price: '50 €' }],
   },
   {
     title: 'Sportmassage',
-    calLink: 'https://cal.com/hannas-massage',
-    ctaLabel: 'Termin anfragen',
+    calLink: 'https://cal.com/hannas-massage/sportmassage',
     options: [
       { duration: '60 Min.', price: '70 €' },
       { duration: '90 Min.', price: '100 €' },
