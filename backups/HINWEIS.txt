@@ -6,4 +6,5 @@ Alles zu Sicherungen liegt nur in diesem Ordner.
   kleine-schritte-backup-JJJJ-MM-TT_SS-MM.zip
 
 Doppelklick auf Backup-erstellen.bat.
-Jedes Backup bekommt Datum und Uhrzeit, alte ZIPs bleiben erhalten.
+Jedes Backup bekommt Datum und Uhrzeit.
+Es bleiben maximal 3 ZIP-Dateien: das neueste und die zwei davor. Ältere werden gelöscht.

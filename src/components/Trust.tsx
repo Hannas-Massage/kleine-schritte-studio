@@ -74,7 +74,7 @@ export const Trust: React.FC = () => {
       </Reveal>
 
       <div className="mt-10 grid gap-4 sm:grid-cols-2">
-        {googleReviews.map((review, index) => (
+        {googleReviews.slice(0, 4).map((review, index) => (
           <Reveal key={review.author} delay={index * 80}>
             <blockquote className="flex h-full flex-col rounded-3xl border border-border bg-card p-7 shadow-soft">
               <StarRow label={`${review.rating} von 5 Sternen`} />

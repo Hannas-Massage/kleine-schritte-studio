@@ -157,7 +157,7 @@ export const Contact: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex items-center gap-4 pt-2">
+            <div className="flex items-center gap-4 pt-2 pl-10 sm:pl-11">
               <a
                 href={createWhatsAppUrl(
                   'Hallo Hanna, ich möchte gerne einen Termin vereinbaren.'
@@ -174,7 +174,7 @@ export const Contact: React.FC = () => {
               </a>
 
               <a
-                href="https://t.me/+4915773602362"
+                href="https://t.me/massage_dillingen"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Telegram"
@@ -210,19 +210,6 @@ export const Contact: React.FC = () => {
                   <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
                   <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                   <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-                </svg>
-              </a>
-
-              <a
-                href="https://www.tiktok.com/@massage_dillingen_donau"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="TikTok"
-                title="TikTok"
-                className="flex h-12 w-12 items-center justify-center rounded-full bg-[#ebe8e3] text-[#111111] transition-transform hover:scale-110 hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 active:scale-95"
-              >
-                <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-.88-.06A6.34 6.34 0 0 0 3 15.68a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.96-4.5V8.69a8.28 8.28 0 0 0 3.81 1V6.69z" />
                 </svg>
               </a>
             </div>

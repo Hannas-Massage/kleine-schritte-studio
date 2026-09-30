@@ -6,6 +6,7 @@ import {
   OfferItem,
   PricingGroup,
   ProcessStepItem,
+  QualificationItem,
   SiteConfig,
 } from '../types';
 
@@ -31,11 +32,16 @@ export const siteConfig: SiteConfig = {
 
 export const googleRating = {
   value: '5,0',
-  count: 4,
+  count: 5,
   asOf: 'September 2026',
 } as const;
 
 export const googleReviews: GoogleReview[] = [
+  {
+    author: 'Emel Ö.',
+    rating: 5,
+    text: 'Ich war bei Hanna zur Massage und habe mich von Anfang an total wohl und gut aufgehoben gefühlt. Sie ist unglaublich freundlich und nimmt sich Zeit, alles in Ruhe zu erklären. Besonders toll fand ich, dass sie mir den Unterschied zwischen einer klassischen Massage und der Lomi Lomi Nui Massage genau erklärt hat.',
+  },
   {
     author: 'Stephanie S.',
     rating: 5,
@@ -166,8 +172,9 @@ export const pricingGroups: PricingGroup[] = [
 export const processSteps: ProcessStepItem[] = [
   {
     number: '1',
-    title: 'Absprache',
-    description: 'Wunschzeit und Schwerpunkt einfach per WhatsApp oder Anruf klären.',
+    title: 'Termin wählen',
+    description:
+      'Wähle deinen Wunschtermin ganz bequem online – Datum, Uhrzeit und Massage nach deiner Wahl.',
   },
   {
     number: '2',
@@ -195,6 +202,12 @@ export const formatServedLocations = (locations: string[] = servedLocations): st
   if (locations.length === 1) return locations[0];
   return `${locations.slice(0, -1).join(', ')} und ${locations[locations.length - 1]}`;
 };
+
+export const qualifications: QualificationItem[] = [
+  { title: 'Wellness-Massage-Therapeutin', icon: 'wellness' },
+  { title: 'Sportmassage und Tapinggrundlagen', icon: 'sport' },
+  { title: 'Präventive Fußreflexzonen-Massage', icon: 'foot' },
+];
 
 export const faqs: FaqItem[] = [
   {

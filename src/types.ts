@@ -39,6 +39,11 @@ export interface FaqItem {
   answer: string;
 }
 
+export interface QualificationItem {
+  title: string;
+  icon: 'wellness' | 'sport' | 'foot';
+}
+
 export interface SiteConfig {
   name: string;
   tagline: string;

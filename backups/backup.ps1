@@ -30,4 +30,13 @@ Add-Type -AssemblyName System.IO.Compression.FileSystem
 
 Remove-Item -LiteralPath $stage -Recurse -Force
 
+$keep = 3
+Get-ChildItem -LiteralPath $backupRoot -Filter "kleine-schritte-backup-*.zip" |
+  Sort-Object LastWriteTime -Descending |
+  Select-Object -Skip $keep |
+  ForEach-Object {
+    Remove-Item -LiteralPath $_.FullName -Force
+    Write-Host "Altes Backup entfernt: $($_.Name)"
+  }
+
 Write-Host "Backup gespeichert: backups\$zipName"

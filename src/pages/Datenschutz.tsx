@@ -36,23 +36,24 @@ export const Datenschutz: React.FC = () => {
         <section>
           <h2 className="text-xl text-foreground">Hosting</h2>
           <p className="mt-2">
-            Diese Website wird derzeit bei Vercel Inc., 440 N Barranca Avenue
-            #4133, Covina, CA 91723, USA, bereitgestellt. Beim Aufruf verarbeitet
-            Vercel technisch notwendige Zugriffsdaten (z.&nbsp;B. IP-Adresse,
-            Datum und Uhrzeit, aufgerufene Seite, Browsertyp), um die Website
-            sicher und stabil auszuliefern (Art. 6 Abs. 1 lit. f DSGVO). Die
-            Übermittlung in die USA erfolgt auf Grundlage von
-            Standardvertragsklauseln (Art. 46 DSGVO). Weitere Informationen:{' '}
+            Diese Website wird derzeit bei der Serverprofis GmbH,
+            Otto-Lilienthal-Ring 34-36, 85622 Feldkirchen, Deutschland,
+            bereitgestellt. Beim Aufruf verarbeitet Serverprofis technisch
+            notwendige Zugriffsdaten (z.&nbsp;B. IP-Adresse, Datum und Uhrzeit,
+            aufgerufene Seite, Browsertyp), um die Website sicher und stabil
+            auszuliefern (Art. 6 Abs. 1 lit. f DSGVO). Da sich der
+            Serverstandort in Deutschland befindet, findet keine
+            Datenübermittlung in ein Drittland statt. Weitere Informationen:{' '}
             <a
-              href="https://vercel.com/legal/privacy-policy"
+              href="https://www.serverprofis.de/datenschutz/"
               className="text-primary hover:underline"
               target="_blank"
               rel="noreferrer"
             >
-              Datenschutzerklärung von Vercel
+              Datenschutzerklärung von Serverprofis
             </a>
-            . Ein späterer Wechsel auf einen Server in Deutschland (netcup GmbH)
-            ist geplant; diese Erklärung wird dann angepasst.
+            . Ein späterer Wechsel auf einen eigenen Server (netcup GmbH) ist
+            geplant; diese Erklärung wird dann angepasst.
           </p>
         </section>
         <section>
@@ -99,6 +100,17 @@ export const Datenschutz: React.FC = () => {
             Marketing- oder Tracking-Cookies eingesetzt. Rechtsgrundlage ist
             Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer
             funktionsfähigen Website).
+          </p>
+        </section>
+        <section>
+          <h2 className="text-xl text-foreground">Speicherdauer</h2>
+          <p className="mt-2">
+            Personenbezogene Daten aus Kontakt- und Terminanfragen werden
+            gelöscht, sobald sie für die Bearbeitung deiner Anfrage nicht mehr
+            erforderlich sind, spätestens jedoch 6 Monate nach Abschluss der
+            Anfrage bzw. des Termins – sofern keine gesetzlichen
+            Aufbewahrungspflichten (z.&nbsp;B. nach Handels- oder Steuerrecht)
+            entgegenstehen.
           </p>
         </section>
         <section>
