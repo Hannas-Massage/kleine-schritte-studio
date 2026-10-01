@@ -1,5 +1,4 @@
 import React from 'react';
-import { createWhatsAppUrl } from '../data/content';
 import { Reveal } from './Reveal';
 
 export const Voucher: React.FC = () => {
@@ -10,20 +9,19 @@ export const Voucher: React.FC = () => {
           <div className="max-w-2xl">
             <h2 className="text-3xl sm:text-4xl">Verschenke eine Auszeit</h2>
             <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
-              Eine Wellnessmassage ist ein besonderes Geschenk – für Mama,
-              den Partner, zum Geburtstag oder für die Großeltern. Gutscheine sind
-              auf Anfrage per WhatsApp erhältlich, individuell auf Wunsch und
-              Anlass abgestimmt.
+              Eine Wellnessmassage ist ein besonderes Geschenk – für Mama, Papa,
+              den Partner, zum Geburtstag, für die Großeltern oder um Freund oder
+              Freundin einfach mal zu überraschen. Wähle einfach deinen
+              Wunschbetrag und bezahle bequem und sicher online – den Gutschein
+              kannst du dann ganz einfach weitergeben.
             </p>
             <a
-              href={createWhatsAppUrl(
-                'Hallo Hanna, ich interessiere mich für einen Gutschein.'
-              )}
+              href="https://giftcards.sumup.com/order/M47F9B75"
               target="_blank"
-              rel="noreferrer"
-              className="mt-8 inline-flex rounded-full bg-primary px-7 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex rounded-full bg-primary px-7 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             >
-              Gutschein anfragen
+              Gutschein kaufen
             </a>
           </div>
         </div>

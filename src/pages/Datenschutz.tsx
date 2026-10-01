@@ -63,11 +63,14 @@ export const Datenschutz: React.FC = () => {
             Eingaben werden lediglich in eine WhatsApp-Nachricht übernommen, die
             du selbst absendest. Für die Nutzung von WhatsApp gelten die
             Datenschutzbestimmungen von WhatsApp Ireland Ltd. Termine kannst du
-            außerdem über Cal.com, Inc. buchen; beim Öffnen des Buchungslinks
-            gelten die Datenschutzbestimmungen von Cal.com. Kontaktieren kannst
-            du mich ebenso per Telefon oder E-Mail; diese Angaben werden zur
-            Bearbeitung deiner Anfrage verarbeitet (Art. 6 Abs. 1 lit. b und f
-            DSGVO).
+            außerdem über Cal.com buchen; beim Öffnen des Buchungslinks gelten
+            die Datenschutzbestimmungen von Cal.com, Inc. Für den Kauf von
+            Gutscheinen verlinken wir auf den Anbieter SumUp Limited, ein von
+            der Central Bank of Ireland reguliertes E-Geld-Institut; beim Öffnen
+            des Zahlungslinks gelten dessen Datenschutzbestimmungen. Kontaktieren
+            kannst du mich ebenso per Telefon oder E-Mail; diese Angaben werden
+            zur Bearbeitung deiner Anfrage verarbeitet (Art. 6 Abs. 1 lit. b und
+            f DSGVO).
           </p>
         </section>
         <section>
