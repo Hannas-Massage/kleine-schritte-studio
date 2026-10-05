@@ -23,6 +23,7 @@ export interface PricingGroup {
   title: string;
   options: PricingOption[];
   calLink?: string;
+  whatsappText?: string;
   ctaLabel?: string;
   badge?: string;
   placeholderText?: string;
@@ -41,7 +42,7 @@ export interface FaqItem {
 
 export interface QualificationItem {
   title: string;
-  icon: 'wellness' | 'sport' | 'foot';
+  icon: 'wellness' | 'sport' | 'foot' | 'baby';
 }
 
 export interface SiteConfig {

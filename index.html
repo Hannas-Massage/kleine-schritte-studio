@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://kleine-schritte-studio.de/" />
     <link rel="preload" as="image" type="image/webp" href="/assets/hero-massage-FZs6C1Mn-960.webp" fetchpriority="high" />
     <link rel="preload" as="font" type="font/woff2" href="/fonts/karla-var.woff2" crossorigin />
     <link rel="preload" as="font" type="font/woff2" href="/fonts/cormorant-garamond-var.woff2" crossorigin />
@@ -12,16 +13,16 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="description"
-      content="Wellness-Massage, Rücken- & Beinmassage und Lomi Lomi Nui in Dillingen an der Donau. Achtsame Auszeiten – individuell auf dich abgestimmt."
+      content="Wellness, Lomi Lomi, Sport, Fußreflex, Schwangerschaft & Wochenbett in Dillingen an der Donau. Achtsame Auszeiten – ganz individuell auf dich abgestimmt."
     />
     <meta property="og:title" content="Wellnessmassage in Dillingen | Kleine Schritte" />
     <meta
       property="og:description"
-      content="Wellness-Massage, Rücken- & Beinmassage und Lomi Lomi Nui in Dillingen an der Donau. Achtsame Auszeiten – individuell auf dich abgestimmt."
+      content="Wellness, Lomi Lomi, Sport, Fußreflex, Schwangerschaft & Wochenbett in Dillingen an der Donau. Achtsame Auszeiten – ganz individuell auf dich abgestimmt."
     />
     <meta
       name="twitter:description"
-      content="Wellness-Massage, Rücken- & Beinmassage und Lomi Lomi Nui in Dillingen an der Donau. Achtsame Auszeiten – individuell auf dich abgestimmt."
+      content="Wellness, Lomi Lomi, Sport, Fußreflex, Schwangerschaft & Wochenbett in Dillingen an der Donau. Achtsame Auszeiten – ganz individuell auf dich abgestimmt."
     />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="de_DE" />
@@ -45,14 +46,16 @@
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=d" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=d" />
     
-    <!-- Schema.org HealthAndBeautyBusiness JSON-LD -->
+    <!-- Schema.org HealthAndBeautyBusiness JSON-LD
+         hasOfferCatalog-Preise aus src/data/content.ts (pricingGroups).
+         Kleinunternehmerregelung § 19 UStG: Endpreise, keine Umsatzsteuer. -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "HealthAndBeautyBusiness",
         "name": "Kleine Schritte – Entspannung & Förderung",
-        "description": "Wellness-Massage, Rücken- & Beinmassage und Lomi Lomi Nui in Dillingen an der Donau. Achtsame Auszeiten – individuell auf dich abgestimmt.",
-        "priceRange": "€35-150",
+        "description": "Wellness, Lomi Lomi, Sport, Fußreflex, Schwangerschaft & Wochenbett in Dillingen an der Donau. Achtsame Auszeiten – ganz individuell auf dich abgestimmt.",
+        "priceRange": "€30-150",
         "telephone": "+49 1577 3602362",
         "email": "info@kleine-schritte-studio.de",
         "image": "https://kleine-schritte-studio.de/og-image.jpg",
@@ -62,6 +65,11 @@
           "postalCode": "89407",
           "addressLocality": "Dillingen an der Donau",
           "addressCountry": "DE"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 48.5769373,
+          "longitude": 10.4813173
         },
         "areaServed": [
           {
@@ -89,6 +97,152 @@
             "name": "Holzheim"
           }
         ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Massage-Angebote",
+          "itemListElement": [
+            {
+              "@type": "OfferCatalog",
+              "name": "Entspannungs-Massage",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "name": "Entspannungs-Massage 60 Min.",
+                  "price": "60",
+                  "priceCurrency": "EUR",
+                  "itemOffered": { "@type": "Service", "name": "Entspannungs-Massage" }
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Entspannungs-Massage 90 Min.",
+                  "price": "90",
+                  "priceCurrency": "EUR",
+                  "itemOffered": { "@type": "Service", "name": "Entspannungs-Massage" }
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Entspannungs-Massage 120 Min.",
+                  "price": "125",
+                  "priceCurrency": "EUR",
+                  "itemOffered": { "@type": "Service", "name": "Entspannungs-Massage" }
+                }
+              ]
+            },
+            {
+              "@type": "OfferCatalog",
+              "name": "Rücken & Beine",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "name": "Rücken & Beine 30 Min.",
+                  "price": "35",
+                  "priceCurrency": "EUR",
+                  "itemOffered": { "@type": "Service", "name": "Rücken & Beine" }
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Rücken & Beine 45 Min.",
+                  "price": "50",
+                  "priceCurrency": "EUR",
+                  "itemOffered": { "@type": "Service", "name": "Rücken & Beine" }
+                }
+              ]
+            },
+            {
+              "@type": "OfferCatalog",
+              "name": "Lomi Lomi Nui",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "name": "Lomi Lomi Nui 60 Min.",
+                  "price": "80",
+                  "priceCurrency": "EUR",
+                  "itemOffered": { "@type": "Service", "name": "Lomi Lomi Nui" }
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Lomi Lomi Nui 90 Min.",
+                  "price": "120",
+                  "priceCurrency": "EUR",
+                  "itemOffered": { "@type": "Service", "name": "Lomi Lomi Nui" }
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Lomi Lomi Nui 120 Min.",
+                  "price": "150",
+                  "priceCurrency": "EUR",
+                  "itemOffered": { "@type": "Service", "name": "Lomi Lomi Nui" }
+                }
+              ]
+            },
+            {
+              "@type": "OfferCatalog",
+              "name": "Fußreflexzonenmassage",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "name": "Fußreflexzonenmassage 45 Min.",
+                  "price": "50",
+                  "priceCurrency": "EUR",
+                  "itemOffered": { "@type": "Service", "name": "Fußreflexzonenmassage" }
+                }
+              ]
+            },
+            {
+              "@type": "OfferCatalog",
+              "name": "Sportmassage",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "name": "Sportmassage 60 Min.",
+                  "price": "70",
+                  "priceCurrency": "EUR",
+                  "itemOffered": { "@type": "Service", "name": "Sportmassage" }
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Sportmassage 90 Min.",
+                  "price": "100",
+                  "priceCurrency": "EUR",
+                  "itemOffered": { "@type": "Service", "name": "Sportmassage" }
+                }
+              ]
+            },
+            {
+              "@type": "OfferCatalog",
+              "name": "Schwangerschaftsmassage",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "name": "Schwangerschaftsmassage 60 Min.",
+                  "price": "60",
+                  "priceCurrency": "EUR",
+                  "itemOffered": { "@type": "Service", "name": "Schwangerschaftsmassage" }
+                }
+              ]
+            },
+            {
+              "@type": "OfferCatalog",
+              "name": "Wochenbettmassage",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "name": "Wochenbettmassage 30 Min.",
+                  "price": "30",
+                  "priceCurrency": "EUR",
+                  "itemOffered": { "@type": "Service", "name": "Wochenbettmassage" }
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Wochenbettmassage 60 Min.",
+                  "price": "60",
+                  "priceCurrency": "EUR",
+                  "itemOffered": { "@type": "Service", "name": "Wochenbettmassage" }
+                }
+              ]
+            }
+          ]
+        },
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "5.0",

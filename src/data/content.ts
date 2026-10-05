@@ -115,8 +115,11 @@ export const offers: OfferItem[] = [
   },
   {
     title: 'Schwangerschaftsmassage',
-    text: 'Eine besonders sanfte Massage, ganz auf die Bedürfnisse werdender Mütter abgestimmt. In sicherer, bequemer Lagerung löse ich Verspannungen im Rücken- und Nackenbereich, fördere die Durchblutung und schenke dir einen Moment tiefer Entspannung – nur für dich und dein Baby.',
-    badge: 'Ab 5. Oktober 2026',
+    text: 'Eine besonders sanfte Massage ab der 13. Schwangerschaftswoche, ganz auf die Bedürfnisse werdender Mütter abgestimmt. In sicherer, bequemer Lagerung lösen sich Verspannungen im Rücken- und Nackenbereich, die Durchblutung wird gefördert – ein Moment tiefer Entspannung, nur für dich und dein Baby.',
+  },
+  {
+    title: 'Wochenbettmassage',
+    text: 'Die erste Zeit mit einem Baby ist wunderschön, aber auch intensiv – dein Körper und vor allem dein Nervensystem leisten jeden Tag unglaublich viel. Genau hier darfst du dir eine kleine Pause gönnen: eine wohltuende Auszeit für Mamas, die sich nach Ruhe, Wärme und ganzheitlicher Entspannung sehnen.',
   },
 ];
 
@@ -162,12 +165,48 @@ export const pricingGroups: PricingGroup[] = [
   },
   {
     title: 'Schwangerschaftsmassage',
-    badge: 'Ab 5. Oktober 2026',
-    placeholderText:
-      'Preise werden nach Abschluss des Kurses bekannt gegeben.',
-    options: [],
+    ctaLabel: 'Per WhatsApp anfragen',
+    whatsappText:
+      'Hallo Hanna, ich interessiere mich für eine Schwangerschaftsmassage. Wann wäre ein Termin möglich?',
+    options: [{ duration: '60 Min.', price: '60 €' }],
+  },
+  {
+    title: 'Wochenbettmassage',
+    ctaLabel: 'Per WhatsApp anfragen',
+    whatsappText:
+      'Hallo Hanna, ich interessiere mich für eine Wochenbettmassage. Wann wäre ein Termin möglich?',
+    options: [
+      { duration: '30 Min.', price: '30 €' },
+      { duration: '60 Min.', price: '60 €' },
+    ],
   },
 ];
+
+/** Endpreise in EUR; Kleinunternehmerregelung § 19 UStG, keine Umsatzsteuer. */
+export function euroAmount(price: string): string {
+  return price.replace(/\s*€/g, '').trim();
+}
+
+export function buildHasOfferCatalog() {
+  return {
+    '@type': 'OfferCatalog' as const,
+    name: 'Massage-Angebote',
+    itemListElement: pricingGroups.map((group) => ({
+      '@type': 'OfferCatalog' as const,
+      name: group.title,
+      itemListElement: group.options.map((option) => ({
+        '@type': 'Offer' as const,
+        name: `${group.title} ${option.duration}`,
+        price: euroAmount(option.price),
+        priceCurrency: 'EUR',
+        itemOffered: {
+          '@type': 'Service' as const,
+          name: group.title,
+        },
+      })),
+    })),
+  };
+}
 
 export const processSteps: ProcessStepItem[] = [
   {
@@ -207,6 +246,7 @@ export const qualifications: QualificationItem[] = [
   { title: 'Wellness-Massage-Therapeutin', icon: 'wellness' },
   { title: 'Sportmassage und Tapinggrundlagen', icon: 'sport' },
   { title: 'Präventive Fußreflexzonen-Massage', icon: 'foot' },
+  { title: 'Schwangerschafts- und Wochenbettmassage', icon: 'baby' },
 ];
 
 export const faqs: FaqItem[] = [
@@ -223,6 +263,16 @@ export const faqs: FaqItem[] = [
     question: 'Was muss ich vorbereiten?',
     answer:
       'Nichts Besonderes – alles Nötige ist vor Ort. Am wohlsten fühlst du dich meist in bequemer Kleidung, und wenn du kurz vorher nicht allzu schwer gegessen hast. Alles Weitere bespreche ich gerne vorab mit dir.',
+  },
+  {
+    question: 'Wann ist eine Schwangerschaftsmassage möglich?',
+    answer:
+      'Ab der 13. Schwangerschaftswoche (4. Monat). Im 7. und 8. Monat sprechen wir den Termin vorher gemeinsam ab, damit wir die für dich angenehme Anwendung finden. Bei Beschwerden oder einer Risikoschwangerschaft bitte vorher Rücksprache mit deiner Ärztin/deinem Arzt oder deiner Hebamme halten.',
+  },
+  {
+    question: 'Wann ist eine Wochenbettmassage möglich?',
+    answer:
+      'Der richtige Zeitpunkt richtet sich individuell danach, wie die Geburt verlaufen ist, wie lange sie zurückliegt und wie sich dein Wochenfluss entwickelt. Deshalb besprechen wir vor dem ersten Termin gemeinsam, wann die Massage für dich passend ist. Bei Komplikationen oder nach einem Kaiserschnitt sprich mich bitte vorher darauf an.',
   },
   {
     question: 'Gibt es Gründe, die gegen eine Massage sprechen?',

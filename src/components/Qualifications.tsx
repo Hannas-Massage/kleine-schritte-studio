@@ -41,6 +41,25 @@ const QualificationIcon: React.FC<{ icon: QualificationItem['icon'] }> = ({
     );
   }
 
+  if (icon === 'baby') {
+    return (
+      <svg
+        className={iconClassName}
+        viewBox="0 0 24 24"
+        fill="none"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5" />
+        <path d="M15 12h 0.01" />
+        <path d="M19.38 6.813A9 9 0 0 1 20.8 10.2a2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1" />
+        <path d="M9 12h 0.01" />
+      </svg>
+    );
+  }
+
   return (
     <svg
       className={iconClassName}
@@ -66,9 +85,9 @@ export const Qualifications: React.FC = () => {
         <h2 className="text-3xl sm:text-4xl">Ausbildung & Qualifikation</h2>
       </Reveal>
 
-      <div className="mt-10 grid gap-6 md:grid-cols-3">
+      <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
         {qualifications.map((item, index) => (
-          <Reveal key={item.title} delay={index * 120}>
+          <Reveal key={item.title} delay={index * 120} className="h-full">
             <article className="flex h-full flex-col rounded-3xl bg-secondary p-8 shadow-soft">
               <span className="text-primary">
                 <QualificationIcon icon={item.icon} />

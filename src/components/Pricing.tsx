@@ -1,5 +1,5 @@
 import React from 'react';
-import { pricingGroups, siteConfig } from '../data/content';
+import { createWhatsAppUrl, pricingGroups, siteConfig } from '../data/content';
 import { ResponsiveImage } from './ResponsiveImage';
 import { Reveal } from './Reveal';
 
@@ -15,7 +15,14 @@ export const Pricing: React.FC = () => {
       </Reveal>
 
       <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {pricingGroups.map((group, index) => (
+        {pricingGroups.map((group, index) => {
+          const ctaHref =
+            group.calLink ??
+            (group.whatsappText
+              ? createWhatsAppUrl(group.whatsappText)
+              : undefined);
+
+          return (
           <Reveal key={group.title} delay={index * 100} className="h-full">
             <div className="flex h-full flex-col rounded-3xl border border-border/80 bg-card p-7 shadow-soft">
               {group.badge && (
@@ -45,17 +52,19 @@ export const Pricing: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                  {group.calLink && (
+                  {ctaHref && (
                     <div className="mt-auto pt-6">
                       <a
-                        href={group.calLink}
+                        href={ctaHref}
                         target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-primary px-4 py-2.5 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                        rel="noopener noreferrer"
+                        className="inline-flex h-11 w-full items-center justify-center gap-1.5 rounded-full border border-primary px-3 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                       >
-                        {group.ctaLabel ?? `Termin für ${group.title}`}
+                        <span className="min-w-0 whitespace-nowrap">
+                          {group.ctaLabel ?? `Termin für ${group.title}`}
+                        </span>
                         <svg
-                          className="h-4 w-4 stroke-current"
+                          className="h-4 w-4 shrink-0 stroke-current"
                           viewBox="0 0 24 24"
                           fill="none"
                           strokeWidth="2"
@@ -73,7 +82,8 @@ export const Pricing: React.FC = () => {
               )}
             </div>
           </Reveal>
-        ))}
+          );
+        })}
       </div>
 
       <p className="mt-4 text-xs leading-relaxed text-muted-foreground">

@@ -31,11 +31,18 @@ export const Offer: React.FC = () => {
       </div>
 
       <Reveal>
-        <p className="mt-8 rounded-2xl border border-accent bg-accent/40 p-5 text-sm text-accent-foreground">
-          <strong>Hinweis:</strong> Es handelt sich um eine reine
-          Wellness-Massage und nicht um eine medizinische oder therapeutische
-          Behandlung.
-        </p>
+        <div className="mt-8 rounded-2xl border border-accent bg-accent/40 p-5 text-sm text-accent-foreground">
+          <p>
+            <strong>Hinweis:</strong> Es handelt sich um eine reine
+            Wellness-Massage und nicht um eine medizinische oder therapeutische
+            Behandlung.
+          </p>
+          <p className="mt-2">
+            Bei Risikoschwangerschaft, gesundheitlichen Beschwerden oder nach
+            einem Kaiserschnitt bitte vorher Rücksprache mit Ärztin/Arzt oder
+            Hebamme halten.
+          </p>
+        </div>
       </Reveal>
     </section>
   );
